@@ -23,7 +23,11 @@ public class UserInput {
         return intValue;
     }
 
-    
+    public static char getChar() {
+        char charValue = input.next().charAt(0);
+
+        return  charValue;
+    }
 
     
 

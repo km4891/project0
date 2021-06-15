@@ -6,6 +6,8 @@ public class App {
         int number = UserInput.getInt(1, 100);
         
         System.out.println(number);
+        System.out.println(UserInput.getChar());
+
 
     }
 }
