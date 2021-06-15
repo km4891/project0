@@ -1,20 +1,25 @@
 import java.util.*; 
 public class UserInput {
 
-    static int result; 
+    static int intResult; 
+    static char charResult;
     static Scanner input = new Scanner (System.in);
 
 
     public static int getInt(int min,  int max) {
-        int intValue = input.nextInt();
+        while (true) {
+            int intValue = input.nextInt();
             if ( intValue >= min  && intValue <= max) {
-                result = intValue;
+                intResult = intValue;
             
             
         } else {
            System.out.println("hey you! pick a number between 1-100");
+           intResult = getInt(min, max);
         }
-        return result;
+    
+        return intResult;
+    }
     }
 
     public static int getInt() {
@@ -29,7 +34,17 @@ public class UserInput {
         return  charValue;
     }
 
-    
+    public static char getChar(char min,  char max) {
+        char charValue = input.next().charAt(0);
+            if ( charValue >= min  && charValue <= max) {
+                charResult = charValue;
+            
+            
+        } else {
+           System.out.println("hey you! pick a letter between A -Z");
+        }
+        return charResult;
+    }
 
 
 }
